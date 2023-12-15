@@ -6,7 +6,7 @@ import {
   markTaskComplete,
   markTaskActive,
   indexTasks,
-  //postTask,
+  postTask,
 } from "./requests.js";
 
 var getAndDisplayAllTasks = function() {
@@ -24,23 +24,23 @@ $(document).ready(function () {
 
   getAndDisplayAllTasks();
 
-  // $("#create-task").on("submit", function (e) {
-  //   e.preventDefault();
-  //   createTask($("#create-task input").val());
-  //   $("#create-task input").val("");
-  // });
+   $("#create-task").on("submit", function (e) {
+     e.preventDefault();
+     createTask($("#create-task input").val());
+     $("#create-task input").val("");
+   });
 
-  // $(document).on("click", ".delete", function () {
-  //   deleteTask($(this).data("id"));
-  // });
+   $(document).on("click", ".delete", function () {
+     deleteTask($(this).data("id"));
+   });
 
-  // $(document).on("click", ".mark-complete", function () {
-  //   markTaskComplete($(this).data("id"));
-  // });
+   $(document).on("click", ".mark-complete", function () {
+     markTaskComplete($(this).data("id"));
+   });
 
-  // $(document).on("click", ".mark-active", function () {
-  //   markTaskActive($(this).data("id"));
-  // });
+   $(document).on("click", ".mark-active", function () {
+     markTaskActive($(this).data("id"));
+   });
 });
 
 //indexTasks(function (response) {
